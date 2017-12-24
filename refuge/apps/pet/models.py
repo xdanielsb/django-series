@@ -12,4 +12,4 @@ class Pet(models.Model):
     age = models.IntegerField()
     rescue_date = models.DateField()
     owner = models.ForeignKey(Person, null = True, blank = True, on_delete=models.CASCADE)
-    vaccines = models.ManyToManyField(Vaccine)
+    vaccines = models.ManyToManyField(Vaccine, blank = True)
