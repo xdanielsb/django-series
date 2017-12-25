@@ -1,0 +1,22 @@
+
+#add this, is the root where is going to copy the static files, the 'statics' must be different "the name" of the static folder. 
+STATIC_ROOT = os.path.join(BASE_DIR, 'statics')
+
+# Database
+# https://docs.djangoproject.com/en/2.0/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dch6a29ftkca2n',
+        'HOST': 'ec2-184-73-240-228.compute-1.amazonaws.com',
+        'USER': 'mkqfxmdhsmfvkc',
+        'PASSWORD': '84b29bf24b9b6f259669c88fd40b118c207df1c9ee75f237f43b49f751092380',
+        'PORT': 5432,
+    }
+}
+
+ALLOWED_HOSTS = ['refugex.herokuapp.com', 'localhost']
+
+
+#heroku run python manage.py makemigrations 
