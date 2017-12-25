@@ -17,12 +17,10 @@ def pet_view(request):
         form = PetForm()
     return render(request , 'pet/pet_form.html', {'form':form})
 
-
 def pet_list(request):
     pets = Pet.objects.all().order_by('id')
     ctx = {'pets':pets}
     return render(request, 'pet/pet_list.html', ctx)
-
 
 def pet_edit(request, id_pet):
     pet  = Pet.objects.get(id=id_pet)
@@ -32,9 +30,8 @@ def pet_edit(request, id_pet):
         form = PetForm(request.POST, instance= pet)
         if form.is_valid():
             form.save()
-        return redirect('pets-index')
+        return redirect('pets-list')
     return render(request, 'pet/pet_form.html', {'form':form})
-
 
 def pet_delete(request, id_pet):
     pet = Pet.objects.get(id=id_pet)
