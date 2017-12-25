@@ -32,6 +32,5 @@ class PetForm(forms.ModelForm):
             'age':forms.NumberInput(attrs={'class':'form-control'}),
             'rescue_date':forms.DateInput(attrs={'class':'form-control'}),
             'owner':forms.Select(attrs={'class':'form-control'}),
-            'vaccines':forms.CheckboxSelectMultiple(attrs={'class':'form-control'}),
-
+            'vaccines':forms.CheckboxSelectMultiple(),
         }
