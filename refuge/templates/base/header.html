@@ -1,12 +1,26 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand main-title" href="#">Pets Land</a>
+      <a class="navbar-brand main-title" href="#">Pet Land</a>
     </div>
     <ul class="nav navbar-nav">
       <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Pet</a></li>
-      <li><a href="#">Adopt</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pet
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Manage</a></li>
+          <li><a href="#">Adopt</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Vaccine
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Register</a></li>
+          <li><a href="#">Manage</a></li>
+        </ul>
+      </li>
       <li><a href="#">About</a></li>
     </ul>
   </div>
