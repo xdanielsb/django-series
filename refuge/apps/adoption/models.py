@@ -7,3 +7,6 @@ class Person(models.Model):
     age = models.IntegerField()
     email = models.EmailField()
     home = models.TextField()
+
+    def __str__(self):
+        return "{}".format(self.name)
