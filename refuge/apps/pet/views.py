@@ -8,10 +8,10 @@ def index(request):
 
 def pet_view(request):
     if request.method == 'POST':
-        form  = PetForm(request.Post)
+        form  = PetForm(request.POST)
         if form.is_valid():
             form.save()
-        return redirect('pets')
+        return redirect('pets-index')
     else:
         form = PetForm()
     return render(request , 'pet/pet_form.html', {'form':form})
