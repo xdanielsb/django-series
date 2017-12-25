@@ -34,3 +34,11 @@ def pet_edit(request, id_pet):
             form.save()
         return redirect('pets-index')
     return render(request, 'pet/pet_form.html', {'form':form})
+
+
+def pet_delete(request, id_pet):
+    pet = Pet.objects.get(id=id_pet)
+    if request.method == "POST":
+        pet.delete()
+        return redirect('pets-list')
+    return render(request, 'pet/pet_delete.html', {'pet':pet})

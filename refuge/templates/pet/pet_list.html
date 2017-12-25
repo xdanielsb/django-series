@@ -23,7 +23,10 @@
           <td>{{pet.age}}</td>
           <td>{{pet.rescue_date}}</td>
           <td>{{pet.owner.name}}</td>
-          <td><a href="{% url 'pets-edit' pet.id %}">Edit</a></td>
+          <td>
+            <a href="{% url 'pets-edit' pet.id %}">Edit</a>
+            <a href="{% url 'pets-delete' pet.id %}">Delete</a>
+          </td>
         </tr>
       {% endfor %}
     {% else %}
